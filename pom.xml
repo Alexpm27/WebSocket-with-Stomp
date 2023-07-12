@@ -50,7 +50,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>wb-server</finalName>
+        <finalName>ws-server</finalName>
     </build>
 
 </project>
