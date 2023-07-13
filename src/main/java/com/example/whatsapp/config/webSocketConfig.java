@@ -23,8 +23,12 @@ public class webSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry){
-        registry.addEndpoint("/ws").setAllowedOriginPatterns("*").withSockJS();
-
+        registry.addEndpoint("/ws")
+                .setAllowedOriginPatterns("")
+                .setAllowedOrigins("")
+                .withSockJS()
+                .setWebSocketEnabled(true)
+                .setSessionCookieNeeded(true);
 
     }
     @Override
@@ -33,6 +37,7 @@ public class webSocketConfig implements WebSocketMessageBrokerConfigurer {
         registration.setSendBufferSizeLimit(2048 * 2048);
         registration.setSendTimeLimit(2048 * 2048);
     }
+
 
 
 }
