@@ -10,10 +10,10 @@ import lombok.*;
 public class Message {
 
     String senderName;
-    String humidity;
     String receiverName;
-    /*String message;
+    String message;
     String file;
-    Long humidity;*/
+    Status status;
+    String humidity;
 
 }
